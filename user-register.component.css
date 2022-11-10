@@ -1,0 +1,44 @@
+
+ body
+ {
+   
+    background-color: white;
+    background-image: url(/assets/images/travel.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }	
+  #f1
+   {
+       border-top : 25px solid #990033;
+       width: 40%;
+       padding :20px;
+        position:relative;
+         width: 465px;
+        height: 700px;
+        margin-left :58.3%;
+        border: 10px solid white;
+        align-content: center;
+        background-color: white;
+     			
+    }
+.label
+{
+   display: inline-block;
+   width :100px;
+  text-align:left;
+
+}		 
+.container signin
+{
+   text-align: center;
+}
+#btn1 
+{
+    display: inline;
+    margin-right:16px;
+}
+#btn2
+{
+    display: inline;
+    margin-left: 15px;
+}
