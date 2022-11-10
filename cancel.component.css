@@ -1,0 +1,29 @@
+.container
+{
+   border: 1px solid #666666 ;
+   border-width: 50px;
+   margin: auto;
+   align: right;
+   background-image:url(/assets/images/travel.jpeg) ;
+   background-repeat: no repeat;
+   
+   
+     }
+.form
+{
+  align :center;
+} 
+.header
+{
+  text-align: center;
+  color:black;
+  text-decoration:underline;
+  text-decoration-style: bold;
+  
+
+}
+
+.form-label
+{
+  color: white;
+}
