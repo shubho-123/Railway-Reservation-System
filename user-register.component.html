@@ -1,116 +1,199 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Registration page</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="user-register.component.css">
-		
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration Page</title>
+	
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
 </head>
 <body>
-	       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-	<div class="container" >
-	   <header class="header" style="text-align: center;"><h2>Registration Form</h2></header>
-	       	<form class="form" (ngSubmit)="onSubmit()">
-	       		 <div class="row justify-content-center">
-	               <div class="mb-3 col-md-6  row g-0 mp-4">
-                        <label for="exampleFormControlInput1" class="form-label"><b>First Name</b></label>
-                         <input type="text" class="form-control " id="exampleFormControlInput1" [(ngModel)]="passanger.firstName" name="firstName" placeholder="First Name" required>
-                     </div>
-                 </div>
+	 <div id="sticky"><h1>Railway Reservation System</h1></div>
 
-                <div class="row justify-content-center">
-                    <div class="mb-3 col-md-6  row g-0 mp-4">
-                         <label for="exampleFormControlInput1" class="form-label"><b>Last Name</b></label>
-                         <input type="text" class="form-control " id="exampleFormControlInput1" [(ngModel)]="passanger.lastName" name="lastName" placeholder="Last Name" required>
+
+
+		 <div class="container" >
+         <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="login-form bg-light mt-4 p-4 mb-4">
+                	<form class="register-form" (ngSubmit)="onSubmit()">
+
+    
+      <div class="col-md-10">
+    <label for="validationDefault01" class="form-label">Set Username</label>
+    <input type="text" class="form-control" id="validationDefault01" [(ngModel)]="passanger.userName" placeholder="@Username" required>
+  </div>
+  <div class="col-md-10">
+    <label for="validationDefault02" class="form-label">Set Password</label>
+    <input type="text" class="form-control" id="validationDefault02" [(ngModel)]="passanger.password" placeholder="Password" required>
+  </div>
+   <div class="col-md-10">
+    <label for="validationDefault03" class="form-label"></label>
+    <input type="text" class="form-control" id="validationDefault03" [(ngModel)]="passanger.firstName" placeholder="First Name" required>
+  </div>
+  <div class="col-md-10">
+    <label for="validationDefault04" class="form-label"></label>
+    <input type="text" class="form-control" id="validationDefault04" [(ngModel)]="passanger.lastName" placeholder="Last name" required>
+  </div>
+
+  <div class="col-md-10">
+    <label for="validationDefault05" class="form-label">Date of Birth</label>
+    <input type="Date" class="form-control" id="validationDefault05" [(ngModel)]="passanger.dob" placeholder="set DOB" required>
+  </div>
+<div class="col-md-4">
+    <label for="validationDefault06" class="form-label">Language</label>
+    <select class="form-select" id="validationDefault06" [(ngModel)]="passanger.language" required>
+      <option selected disabled value="">Choose...</option>
+      <option value="bengali">Bengali</option>
+      <option value="hindi">Hindi</option>
+      <option value="english">English</option>
+      <option value="tamil">Tamil</option>
+    </select>
+  </div>
+<div> <label></label></div>
+  <div class="col-md-4">
+    <label class="form-label"><b>Gender</b></label>
+ </div>
+
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" [(ngModel)]="passanger.gender" value="Male" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Male
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" [(ngModel)]="passanger.gender" value="Female">
+  <label class="form-check-label" for="exampleRadios2">
+    Femail
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" [(ngModel)]="passanger.gender" value="Other">
+  <label class="form-check-label" for="exampleRadios2">
+    Other
+  </label>
+</div>
+<div for="validationDefault07">
+ <b> Phone Number :</b><input id="validationDefault02" type="text" name="country code" value="+91" size="1" disabled />
+              <input id="validationDefault07" type="text" name="phone" [(ngModel)]="passanger.phoneNumber" placeholder="PhoneNumber" size="10"/>
+</div>
+  <div class="mb-3">
+    <label for="validationDefault08" class="form-label">Email address</label>
+    <input type="email" class="form-control is-invalid" id="validationDefault08"  [(ngModel)]="passanger.email" aria-describedby="emailHelp" placeholder="text@gmail.com">
+    <div id="emailHelp" class="form-text">We'll never share your email.</div>
+  </div>
+
+<div><label>Addres Details :</label></div>
+
+ <div class="col-md-6">
+    <label for="validationDefault12" class="form-label">Country</label>
+    <select class="form-select" id="validationDefault12" [(ngModel)]="passanger.country" required>
+      <option selected disabled value="">Choose...</option>
+      <option name="BR" disabled>Brazil</option>
+      <option name="CA" disabled>Canada</option>
+      <option name="DE" disabled>Germany</option>
+      <option name="IN" >India</option>
+      <option name="TR" disabled>Turkey</option>
+      <option name="US"disabled>United States</option>
+    </select>
+  </div>
+<div class="row g-3">
+  <div class="col-sm-5">
+    <label for="validationDefault09" class="form-label">City</label>
+    <input type="text" class="form-control" placeholder="City" [(ngModel)]="passanger.city" aria-label="City">
+  </div>
+  <div class="col-sm">
+   <label for="validationDefault010" class="form-label">State</label>
+    <select class="form-select" id="validationDefault10" [(ngModel)]="passanger.state" required>
+      <option selected disabled value="">Choose...</option>
+      <option name=""> Andhra Pradesh</option>
+      <option name="">Arunachal Pradesh </option>
+      <option name="">Assam </option>
+      <option name="">Bihar </option>
+      <option name=""> Chhattisgarh</option>
+      <option name="">Goa </option>
+      <option name=""> Gujarat</option>
+      <option name="">Haryana </option>
+      <option name="">Himachal Pradesh </option>
+      <option name="">Jammu & Kashmir</option>
+      <option name="">Jharkhand</option>
+      <option name="">Karnataka</option>
+      <option name="">Kerala</option>
+      <option name="">Madhya Pradesh</option>
+      <option name="">Maharashtra</option>
+      <option name="">Manipur</option>
+      <option name="">Meghalaya</option>
+      <option name="">Mizoram</option>
+      <option name="">Nagaland</option>
+      <option name="">Odisha</option>
+      <option name="">Punjab</option>
+      <option name="">Rajasthan</option>
+      <option name="">Sikkim</option>
+      <option name="">Tamil Nadu</option>
+      <option name="">Telangana</option>
+      <option name="">Tripura</option>
+      <option name="">Uttar Pradesh</option>
+      <option name="">Uttarakhand</option>
+      <option name="">West Bengal</option>
+      <option name="">Andaman and Nicobar Islands</option>
+      <option name="">Chandigarh</option>
+      <option name="">Dadra and Nagar Havel</option>
+      <option name="">Daman & Diu</option>
+      <option name="">Lakshadweep</option>
+      <option name="">Puducherry</option>
+      <option name="">The Government of NCT of Delhi</option>
+    </select>
+  </div>
+  <div class="col-sm">
+    <label for="validationDefault11" class="form-label">Zip Code</label>
+    <input type="text" class="form-control" placeholder="Zip" [(ngModel)]="passanger.pincode" aria-label="Zip" name="pincode">
+  </div>
+</div>
+   <div class="col-md-10">
+    <label class="form-label">Street</label>
+    <input type="text" class="form-control" [(ngModel)]="passanger.street" required>
+  </div>
+  <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">AddressLine</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="passanger.addressLine" rows="3"></textarea>
+</div>
+
+
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+      <label class="form-check-label" for="invalidCheck2">
+        Agree to terms and conditions
+      </label>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <button class="btn btn-outline-primary" type="submit" (click)="registerNow()">Submit form</button>
+  </div>
+  
+					
+					
+				<!--	<div class="mb-3">
+  					<label for="exampleFormControlInput1" class="form-label">Email address</label>
+  					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+					</div>
+        -->
+          <p class="text-center mb-0">Already Registered? <a href="/login"  ><b>Login</b></a></p>
+					</form>
+
+
+
                     </div>
                 </div>
-
-            
-        
-                 <div class="row justify-content-center">
-                    <div class="mb-3  col-md-6 row g-0">
-                         <label for="exampleFormControlInput1" class="form-label"><b>Gender</b></label>
-                         <select class="form-select" aria-label="Disabled select example" [(ngModel)]="passanger.gender" name="gender">
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                </div>
-
-
-                <div class="row justify-content-center">
-                    <div class="mb-3  col-md-6 row g-0 ">
-                         <label for="exampleFormControlInput1" class="form-label"><b>Phone Number</b></label>
-                         <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="passanger.mobileNumber" name="mobileNumber" placeholder="Phone Number" required>
-                    </div>
-                </div>
-
-                
-                <div class="row justify-content-center">
-                    <div class="mb-3  col-md-6 row g-0">
-                         <label for="exampleFormControlInput1" class="form-label"><b>Address</b></label>
-                         <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="passanger.address" name="address" placeholder="Address">
-                    </div>
-                </div>
-                
-
-                <div class="row justify-content-center">
-                    <div class="mb-3  col-md-6 row g-0">
-                         <label for="exampleFormControlInput1" class="form-label"><b>Email</b></label>
-                         <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="passanger.emailId" name="emailId" placeholder="EmailId" required>
-                    </div>
-            	 </div>
-
-                <div class="row justify-content-center">
-                    <div class="mb-3  col-md-6 row g-0">
-                         <label for="exampleFormControlInput1" class="form-label" ><b>User Name</b></label>
-                         <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="passanger.userName" name="userName" placeholder="username" required>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="mb-3  col-md-6 row g-0">
-                         <label for="exampleFormControlInput1" class="form-label"><b>Password</b></label>
-                         <input type="password" class="form-control" id="exampleFormControlInput1" [(ngModel)]="passanger.password" name="password" placeholder="Password" required>
-                    </div>
-               </div>
-
-                <div class="row justify-content-center">
-                    <div class="mb-3  col-md-6 row g-0">
-                         <label for="exampleFormControlInput1" class="form-label"><b>Retype - Password</b></label>
-                         <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password" required>
-                    </div>
-                </div>
-
-
-               <div class="row justify-content-center">
-                    <div class="mb-2 col-md-2">
-                        <button class="btn btn-primary" id=" btn1" type="submit"  (click)="registerNow()">Register</button>
-
-                         <button class="btn btn-primary" id="btn2" type="reset" >Reset</button>
-                     
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="mb-3 col-md-3">
-                        <p><b>Already have an account?</b><a href="/login" > <b>Sign in</b></a></p>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
-    </body>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+
+</body>
 </html>
-                    
-               
-                
-           
-        
-        
-
-
